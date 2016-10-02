@@ -5,11 +5,14 @@ var BundleTracker = require('webpack-bundle-tracker')
 module.exports = {
   context: __dirname,
 
-  entry: path.resolve('./assets/js/index'),
+  entry: {
+    pixelart: path.resolve('./assets/js/pixel-art'),
+    polygon: path.resolve('./assets/js/polygon')
+  },
 
   output: {
-      path: path.resolve('./assets/bundles/'),
-      filename: "[name].js",
+    path: path.resolve('./assets/bundles/'),
+    filename: "[name].js",
   },
 
   plugins: [
